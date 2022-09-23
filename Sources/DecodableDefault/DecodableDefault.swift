@@ -48,6 +48,7 @@ public extension DecodableDefault {
   typealias EmptyList<T: List> = Wrapper<Sources.EmptyList<T>>
   typealias EmptyMap<T: Map> = Wrapper<Sources.EmptyMap<T>>
   typealias EmptyDouble = Wrapper<Sources.EmptyDouble>
+  typealias EmptyInt = Wrapper<Sources.EmptyInt>
 }
 
 public extension DecodableDefault {
@@ -78,6 +79,10 @@ public extension DecodableDefault {
     
     public enum EmptyDouble: Source {
       public static var defaultValue: Double { 0 }
+    }
+    
+    public enum EmptyInt: Source {
+      public static var defaultValue: Int { 0 }
     }
   }
 }
